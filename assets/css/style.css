@@ -50,7 +50,7 @@ nav ul {
 nav ul li {
   list-style: none;
 }
-button {
+.getStarted {
   padding: 10px 16px;
   background-color: #191919;
   border: 1px solid #191919;
@@ -58,7 +58,7 @@ button {
   border-radius: 99rem;
   transition: all 0.5s;
 }
-button.getStarted[data-scrolled="true"] {
+.getStarted[data-scrolled="true"] {
   background-color: green;
 }
 .line-black {
@@ -97,9 +97,13 @@ button.getStarted[data-scrolled="true"] {
 .hero-text p {
   font-size: 1.5rem;
 }
-.hero-text button {
-  font-size: 20px;
+.hero-button {
+  background-color: #191919;
+  border: 1px solid #191919;
+  color: white;
+  border-radius: 99rem;
   width: 213px;
+  font-size: 20px;
   padding: 8px 20px;
 }
 .hero-svg {
@@ -162,17 +166,14 @@ button.getStarted[data-scrolled="true"] {
 .container-img {
   padding-inline-end: 0.5rem;
 }
-.container-img img {
+div.container-img img {
   width: 25px;
 }
-.container-img > img:nth-of-type(1),
-.container-img > img:nth-of-type(2) {
+.container-trending .trend-card:nth-child(1) .container-img img,
+.container-trending .trend-card:nth-child(2) .container-img img {
   border-radius: 50%;
 }
-.container-img > img:nth-of-type(3),
-.container-img > img:nth-of-type(4),
-.container-img > img:nth-of-type(5),
-.container-img > img:nth-of-type(6) {
+.container-trending .trend-card:nth-child(n + 3) .container-img img {
   border-radius: 10%;
 }
 span.card-author {
