@@ -34,7 +34,7 @@ header[data-scrolled="true"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 75px;
+  min-height: 75px;
 }
 
 nav {
@@ -80,7 +80,7 @@ nav ul li {
   display: flex;
   justify-content: start;
   align-items: center;
-  height: 460px;
+  min-height: 460px;
   width: 1200px;
   padding-inline: 2rem;
 }
