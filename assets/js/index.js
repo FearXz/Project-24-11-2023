@@ -1,9 +1,10 @@
 function changeOnScroll() {
   let header = document.querySelector("header");
   let button = document.querySelector("header button.getStarted");
-  let targetY = 530;
+  let targetY = 500;
 
   let posY = window.scrollY;
+  console.log(posY);
 
   if (posY > targetY) {
     header.setAttribute("data-scrolled", "true");
