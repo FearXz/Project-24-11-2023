@@ -197,7 +197,6 @@ div.card-date {
   margin-bottom: 30px;
 }
 .last-container {
-  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -259,12 +258,13 @@ div.post-date {
   color: #757578;
 }
 .right-area {
+  padding-block-start: 2rem;
   width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: sticky;
-  top: 75;
+  top: 75px;
 }
 .right-container {
   display: flex;
