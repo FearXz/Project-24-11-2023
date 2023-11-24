@@ -13,6 +13,10 @@ header {
   position: sticky;
   top: 0;
   z-index: 999;
+  transition: all 0.5s;
+}
+header[data-scrolled="true"] {
+  background-color: white;
 }
 .width {
   max-width: 1200px;
@@ -24,7 +28,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffc017;
 }
 .header-wrapper {
   width: 100%;
@@ -33,9 +36,7 @@ header {
   align-items: center;
   height: 75px;
 }
-.logo {
-  /*padding-inline: 2rem;*/
-}
+
 nav {
   display: flex;
   align-items: center;
@@ -55,6 +56,10 @@ button {
   border: 1px solid #191919;
   color: white;
   border-radius: 99rem;
+  transition: all 0.5s;
+}
+button.getStarted[data-scrolled="true"] {
+  background-color: green;
 }
 .line-black {
   height: 1px;
