@@ -212,6 +212,7 @@ div.card-date {
   justify-content: center;
   align-items: start;
   gap: 50px;
+  margin-block-end: 50px;
 }
 
 .post-card {
