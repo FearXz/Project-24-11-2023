@@ -230,6 +230,7 @@ div.card-date {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10px;
+  width: 100%;
 }
 div.post-date {
   width: 100%;
