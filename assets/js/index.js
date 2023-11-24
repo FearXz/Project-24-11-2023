@@ -14,3 +14,18 @@ function changeOnScroll() {
   }
 }
 document.addEventListener("scroll", changeOnScroll);
+
+function changeOpacity() {
+  let tagGWithOpacity = document.querySelectorAll("g[opacity]");
+
+  tagGWithOpacity.forEach(function (tagG) {
+    let opacityCheck = parseInt(tagG.getAttribute("opacity"));
+
+    if (opacityCheck == 0) {
+      tagG.setAttribute("opacity", 1);
+    } else if (opacityCheck == 1) {
+      tagG.setAttribute("opacity", 0);
+    }
+  });
+}
+setInterval(changeOpacity, 1000);
