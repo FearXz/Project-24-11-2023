@@ -27,6 +27,7 @@ function swap01() {
   });
 }
 //swap01();
+/*
 function changeOpacity() {
   let tagGWithOpacity = document.querySelectorAll("svg g[opacity][style='display: inherit']");
   console.log(tagGWithOpacity);
@@ -41,4 +42,15 @@ function changeOpacity() {
     }
   });
 }
-setInterval(changeOpacity, 4000);
+setInterval(changeOpacity, 4000);*/
+function randomOpacity() {
+  let tagGWithOpacity0 = document.querySelectorAll("svg g[opacity='0'][style='display: inherit']");
+  console.log(tagGWithOpacity0);
+
+  let randomIndex = Math.floor(Math.random() * tagGWithOpacity0.length);
+  tagGWithOpacity0[randomIndex].setAttribute("opacity", "1");
+  setTimeout(() => {
+    tagGWithOpacity0[randomIndex].setAttribute("opacity", "0");
+  }, 3000);
+}
+setInterval(randomOpacity, 2000);
