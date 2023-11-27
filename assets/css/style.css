@@ -18,6 +18,9 @@ header {
 header[data-scrolled="true"] {
   background-color: white;
 }
+g {
+  transition: all 1s;
+}
 .width {
   max-width: 1200px;
   padding-inline: 2rem;

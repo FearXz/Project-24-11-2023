@@ -15,18 +15,30 @@ function changeOnScroll() {
   }
 }
 document.addEventListener("scroll", changeOnScroll);
-
+function swap01() {
+  let tagGWithOpacity = document.querySelectorAll("svg g[opacity='1'][style='display: inherit']");
+  //console.log(tagGWithOpacity);
+  tagGWithOpacity.forEach(function (tagG, index) {
+    if (index % 2 != 0) {
+      tagG.setAttribute("opacity", "0");
+    } else {
+      tagG.setAttribute("opacity", "0");
+    }
+  });
+}
+//swap01();
 function changeOpacity() {
-  let tagGWithOpacity = document.querySelectorAll("g[opacity]");
+  let tagGWithOpacity = document.querySelectorAll("svg g[opacity][style='display: inherit']");
+  console.log(tagGWithOpacity);
 
   tagGWithOpacity.forEach(function (tagG) {
     let opacityCheck = parseInt(tagG.getAttribute("opacity"));
 
     if (opacityCheck == 0) {
-      tagG.setAttribute("opacity", 1);
+      tagG.setAttribute("opacity", "1");
     } else if (opacityCheck == 1) {
-      tagG.setAttribute("opacity", 0);
+      tagG.setAttribute("opacity", "0");
     }
   });
 }
-setInterval(changeOpacity, 1000);
+setInterval(changeOpacity, 4000);
