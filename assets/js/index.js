@@ -10,10 +10,11 @@ function changeOnScroll() {
     header.setAttribute("data-scrolled", "true");
     button.setAttribute("data-scrolled", "true");
   } else {
-    header.removeAttribute("data-scrolled");
-    button.removeAttribute("data-scrolled");
+    header.setAttribute("data-scrolled", "false");
+    button.setAttribute("data-scrolled", "false");
   }
 }
+document.addEventListener("scroll", changeOnScroll);
 function randomOpacity() {
   let tagGWithOpacity0 = document.querySelectorAll("svg g[opacity='0'][style='display: inherit']");
   console.log(tagGWithOpacity0);
@@ -26,7 +27,7 @@ function randomOpacity() {
 }
 setInterval(randomOpacity, 1000);
 /*
-document.addEventListener("scroll", changeOnScroll);
+
 function swap01() {
   let tagGWithOpacity = document.querySelectorAll("svg g[opacity='1'][style='display: inherit']");
   //console.log(tagGWithOpacity);
