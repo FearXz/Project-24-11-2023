@@ -14,6 +14,18 @@ function changeOnScroll() {
     button.removeAttribute("data-scrolled");
   }
 }
+function randomOpacity() {
+  let tagGWithOpacity0 = document.querySelectorAll("svg g[opacity='0'][style='display: inherit']");
+  console.log(tagGWithOpacity0);
+
+  let randomIndex = Math.floor(Math.random() * tagGWithOpacity0.length);
+  tagGWithOpacity0[randomIndex].setAttribute("opacity", "1");
+  setTimeout(() => {
+    tagGWithOpacity0[randomIndex].setAttribute("opacity", "0");
+  }, 2000);
+}
+setInterval(randomOpacity, 1000);
+/*
 document.addEventListener("scroll", changeOnScroll);
 function swap01() {
   let tagGWithOpacity = document.querySelectorAll("svg g[opacity='1'][style='display: inherit']");
@@ -25,7 +37,7 @@ function swap01() {
       tagG.setAttribute("opacity", "0");
     }
   });
-}
+}*/
 //swap01();
 /*
 function changeOpacity() {
@@ -43,14 +55,3 @@ function changeOpacity() {
   });
 }
 setInterval(changeOpacity, 4000);*/
-function randomOpacity() {
-  let tagGWithOpacity0 = document.querySelectorAll("svg g[opacity='0'][style='display: inherit']");
-  console.log(tagGWithOpacity0);
-
-  let randomIndex = Math.floor(Math.random() * tagGWithOpacity0.length);
-  tagGWithOpacity0[randomIndex].setAttribute("opacity", "1");
-  setTimeout(() => {
-    tagGWithOpacity0[randomIndex].setAttribute("opacity", "0");
-  }, 3000);
-}
-setInterval(randomOpacity, 2000);
