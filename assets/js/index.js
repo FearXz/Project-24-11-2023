@@ -23,9 +23,9 @@ function randomOpacity() {
   tagGWithOpacity0[randomIndex].setAttribute("opacity", "1");
   setTimeout(() => {
     tagGWithOpacity0[randomIndex].setAttribute("opacity", "0");
-  }, 2000);
+  }, 1000);
 }
-setInterval(randomOpacity, 1000);
+setInterval(randomOpacity, 500);
 /*
 
 function swap01() {
